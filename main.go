@@ -6,7 +6,7 @@ import (
 	"golang.org/x/crypto/bcrypt"
 )
 
-//cleanString removes leading whitespace and quotes (as often get added when running as a commandline app in windows)
+//cleanString removes leading and trailing quotes (as often get added when running as a commandline app in windows)
 func cleanString(s string) string {
 	if len(s) > 0 && s[0] == '"' {
 		s = s[1:]
